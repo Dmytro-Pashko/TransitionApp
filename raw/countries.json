@@ -4,78 +4,78 @@
       "id": 1,
       "name": "Czech Republic",
       "description": "The Czech Republic also known by its short-form name, is a country in Central Europe bordered by Germany to the west, Austria to the south, Slovakia to the east, and Poland to the northeast. The Czech Republic is a landlocked country with a hilly landscape that covers an area of 78,866 square kilometers (30,450 sq mi) with a mostly temperate continental climate and oceanic climate. It is a unitary parliamentary republic, with 10.7 million inhabitants. Its capital and largest city is Prague, with 1.3 million residents; other major cities are Brno, Ostrava, Olomouc and Pilsen.",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/czech_republic.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/czech_republic_2.jpg"
     },
     {
       "id": 2,
       "name": "Poland",
       "description": "Poland, officially the Republic of Poland, is a country located in Central Europe. It is divided into 16 administrative subdivisions, covering an area of 312,696 square kilometres (120,733 sq mi), and has a largely temperate seasonal climate. With a population of nearly 38.5 million people, Poland is the sixth most populous member state of the European Union. Poland's capital and largest metropolis is Warsaw. Other major cities include Kraków, Łódź, Wrocław, Poznań, Gdańsk, and Szczecin.",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/poland.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/poland_2.jpg"
     },
     {
       "id": 3,
       "name": "Ukraine",
       "description": "Ukraine is a country in Eastern Europe. It is bordered by Russia to the north-east; Belarus to the north; Poland, Slovakia and Hungary to the west; and Romania, Moldova, and the Black Sea to the south. Ukraine is currently in a territorial dispute with Russia over the Crimean Peninsula, which Russia annexed in 2014. Including Crimea, Ukraine has an area of 603,628 km2 (233,062 sq mi), making it both the largest country entirely within Europe and the 46th largest country in the world. Excluding Crimea, Ukraine has a population of about 42 million, making it the 32nd most populous country in the world. Its capital and largest city is Kiev.",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/ukraine.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/ukraine_2.jpg"
     },
     {
       "id": 4,
       "name": "Romania",
       "description": "Romania is a country located at the crossroads of Central, Eastern, and Southeastern Europe. It has borders with the Black Sea to the southeast, Bulgaria to the south, Ukraine to the north, Hungary to the west, Serbia to the southwest, and Moldova to the east. It has a predominantly temperate-continental climate. With a total area of 238,397 square kilometers (92,046 square miles), Romania is the 12th largest country and also the 7th most populous member state of the European Union, having almost 20 million inhabitants. Its capital and largest city is Bucharest, and other major urban areas include Cluj-Napoca, Timișoara, Iași, Constanța, Craiova, Brașov, and Galați.",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/romania.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/romania_2.jpg"
     },
     {
       "id": 5,
       "name": "Slovakia",
       "description": "Slovakia, officially the Slovak Republic is a landlocked country in Central Europe. It is bordered by Poland to the north, Ukraine to the east, Hungary to the south, Austria to the west, and the Czech Republic to the northwest. Slovakia's territory spans about 49,000 square kilometres (19,000 sq mi) and is mostly mountainous. The population is over 5.6 million and consists mostly of Slovaks. The capital and largest city is Bratislava, and the second-largest city is Košice. The official language is Slovak.",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/slovakia.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/slovakia_2.jpg"
     },
     {
       "id": 6,
       "name": "Estonia",
       "description": "Estonia, officially the Republic of Estonia, is a country on the eastern coast of the Baltic Sea in Northern Europe. It is bordered to the north by the Gulf of Finland with Finland on the other side, to the west by the Baltic Sea with Sweden on the other side, to the south by Latvia (343 km), and to the east by Lake Peipus and Russia (338.6 km). The territory of Estonia consists of a mainland and 2,222 islands in the Baltic Sea, covering a total area of 45,227 km2 (17,462 sq mi), water 2,839 km2 (1,096 sq mi), land area 42,388 km2 (16,366 sq mi), and is influenced by a humid continental climate. The official language of the country, Estonian, is the second-most-spoken Finnic language.",
-      "preview": "",
-      "background": ""
+      "preview": "https://github.com/Dmytro-Pashko/TransitionApp/blob/master/raw/img/estonia.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/estonia_2.jpg"
     },
     {
       "id": 7,
       "name": "Latvia",
       "description": "Latvia, officially known as the Republic of Latvia, is a country in the Baltic region of the Northern part of Eastern Europe. Since its independence, Latvia has been referred to as one of the Baltic states. It is bordered by Estonia to the north, Lithuania to the south, Russia to the east, and Belarus to the southeast, and shares a maritime border with Sweden to the west. Latvia has 1,957,200 inhabitants and a territory of 64,589 km2 (24,938 sq mi).[15] The country has a temperate seasonal climate. The Baltic Sea moderates seasons, although it has four distinct ones and snowy winters.",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/latvia.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/latvia_2.jpg"
     },
     {
       "id": 8,
       "name": "Lithuania",
       "description": "Lithuania, officially the Republic of Lithuania, is a country in the Baltic region of Europe. Lithuania is considered to be one of the Baltic states. The country is situated along the southeastern shore of the Baltic Sea, to the east of Sweden and Denmark. It is bordered by Latvia to the north, Belarus to the east and south, Poland to the south, and Kaliningrad Oblast (a Russian exclave) to the southwest. Lithuania has an estimated population of 2.8 million people as of 2019, and its capital and largest city is Vilnius. Other major cities are Kaunas and Klaipėda. Lithuanians are Baltic people. The official language, Lithuanian, is one of only two living languages in the Baltic branch of the Indo-European language family, the other being Latvian.",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/lithuania.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/lithuania_2.jpg"
     },
     {
       "id": 9,
       "name": "Belarus",
       "description": "Belarus, officially the Republic of Belarus, formerly known by its Russian name Byelorussia or Belorussia, is a landlocked country in Eastern Europe bordered by Russia to the northeast, Ukraine to the south, Poland to the west, and Lithuania and Latvia to the northwest. Its capital and most populous city is Minsk. Over 40% of its 207,600 square kilometres (80,200 sq mi) is forested. Its major economic sectors are service industries and manufacturing. Until the 20th century, different states at various times controlled the lands of modern-day Belarus, including the Principality of Polotsk (11th to 14th centuries), the Grand Duchy of Lithuania, the Polish–Lithuanian Commonwealth, and the Russian Empire.",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/belarus.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/belarus_2.jpg"
     },
     {
       "id": 10,
       "name": "Hungary",
       "description": "Hungary is a country in Central Europe. Spanning 93,030 square kilometres (35,920 sq mi) in the Carpathian Basin, it borders Slovakia to the north, Ukraine to the northeast, Austria to the northwest, Romania to the east, Serbia to the south, Croatia to the southwest, and Slovenia to the west. With about 10 million inhabitants, Hungary is a medium-sized member state of the European Union. The official language is Hungarian, which is the most widely spoken Uralic language in the world, and among the few non-Indo-European languages to be widely spoken in Europe. Hungary's capital and largest city is Budapest; other major urban areas include Debrecen, Szeged, Miskolc, Pécs and Győr.",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/hungary.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/hungary_2.jpg"
     },
     {
       "id": 11,
       "name": "Moldova",
       "description": "Moldova, officially the Republic of Moldova, is a landlocked country in Eastern Europe, bordered by Romania to the west and Ukraine to the north, east, and south. The capital city is Chișinău. Most of the Moldovan territory was a part of the Principality of Moldavia from the 14th century until 1812, when it was ceded to the Russian Empire by the Ottoman Empire (to which Moldavia was a vassal state) and became known as Bessarabia. In 1856, southern Bessarabia was returned to Moldavia, which three years later united with Wallachia to form Romania, but Russian rule was restored over the whole of the region in 1878. During the 1917 Russian Revolution, Bessarabia briefly became an autonomous state within the Russian Republic, known as the Moldavian Democratic Republic. In February 1918, the Moldavian Democratic Republic declared independence and then integrated into Romania later that year following a vote of its assembly. The decision was disputed by Soviet Russia, which in 1924 established, within the Ukrainian SSR, a Moldavian autonomous republic (MASSR) on partially Moldovan-inhabited territories to the east of Bessarabia. In 1940, as a consequence of the Molotov–Ribbentrop Pact, Romania was compelled to cede Bessarabia to the Soviet Union, leading to the creation of the Moldavian Soviet Socialist Republic (Moldavian SSR), which included the greater part of Bessarabia and the westernmost strip of the former MASSR (east of the Dniester River).",
-      "preview": "",
-      "background": ""
+      "preview": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/moldova.png",
+      "background": "https://raw.githubusercontent.com/Dmytro-Pashko/TransitionApp/master/raw/img/moldova_2.jpg"
     }
   ]
 }
