@@ -1,4 +1,4 @@
-# Shared element transition example Application
+# Example Application to demonstrate shared element transition animation.
 
 ## Start an activity using the shared elements transition animation
 
