@@ -4,17 +4,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dpashko.transitionapp.model.CountriesModel
+import com.dpashko.transitionapp.model.Countries
 import com.dpashko.transitionapp.model.Event
-import com.dpashko.transitionapp.repository.CountriesRepository
+import com.dpashko.transitionapp.repository.CountryRepository
 import kotlinx.coroutines.launch
 
-class ListActivityViewModel : ViewModel() {
+class CountriesListViewModel : ViewModel() {
 
-    private val countries = MutableLiveData<Event<CountriesModel>>()
-    private val repository: CountriesRepository = CountriesRepository()
+    private val countries = MutableLiveData<Event<Countries>>()
+    private val repository: CountryRepository = CountryRepository()
 
-    fun getCountries(): LiveData<Event<CountriesModel>> {
+    fun getCountries(): LiveData<Event<Countries>> {
         if (countries.value == null) {
             loadCountries()
         }

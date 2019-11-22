@@ -6,28 +6,28 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.dpashko.transitionapp.R
-import com.dpashko.transitionapp.databinding.ActivityListBinding
-import com.dpashko.transitionapp.model.CountriesModel
+import com.dpashko.transitionapp.databinding.ActivityCountriesListBinding
+import com.dpashko.transitionapp.model.Countries
 import com.dpashko.transitionapp.model.Event
 import com.dpashko.transitionapp.model.Status
 
-class ListActivity : AppCompatActivity() {
+class CountriesListActivity : AppCompatActivity() {
 
-    lateinit var view: ActivityListBinding
+    private lateinit var view: ActivityCountriesListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        view = DataBindingUtil.setContentView(this, R.layout.activity_list)
-        val model = ViewModelProviders.of(this)[ListActivityViewModel::class.java]
-        model.getCountries().observe(this, Observer<Event<CountriesModel>> { event ->
+        view = DataBindingUtil.setContentView(this, R.layout.activity_countries_list)
+        val model = ViewModelProviders.of(this)[CountriesListViewModel::class.java]
+        model.getCountries().observe(this, Observer<Event<Countries>> { event ->
             updateList(event)
         })
     }
 
-    private fun updateList(event: Event<CountriesModel>) {
+    private fun updateList(event: Event<Countries>) {
         when (event.status) {
             Status.LOADING -> showLoading()
-            Status.SUCCESS -> showData()
+            Status.SUCCESS -> event.data?.let { showData(it) }
             Status.ERROR -> showError()
         }
     }
@@ -36,7 +36,7 @@ class ListActivity : AppCompatActivity() {
         view.loading = true
     }
 
-    private fun showData() {
+    private fun showData(countries: Countries) {
         view.loading = false
     }
 
