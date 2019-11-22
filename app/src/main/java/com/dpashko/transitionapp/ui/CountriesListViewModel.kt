@@ -8,11 +8,13 @@ import com.dpashko.transitionapp.model.Countries
 import com.dpashko.transitionapp.model.Event
 import com.dpashko.transitionapp.repository.CountryRepository
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class CountriesListViewModel : ViewModel() {
 
-    private val countries = MutableLiveData<Event<Countries>>()
-    private val repository: CountryRepository = CountryRepository()
+class CountriesListViewModel @Inject constructor(private val repository: CountryRepository) :
+    ViewModel() {
+
+    private val countries: MutableLiveData<Event<Countries>> = MutableLiveData()
 
     fun getCountries(): LiveData<Event<Countries>> {
         if (countries.value == null) {

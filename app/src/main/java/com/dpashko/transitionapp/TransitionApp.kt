@@ -1,7 +1,11 @@
 package com.dpashko.transitionapp
 
-import android.app.Application
+import com.dpashko.transitionapp.di.DaggerAppComponent
+import dagger.android.DaggerApplication
 
-class TransitionApp : Application(){
+class TransitionApp : DaggerApplication() {
 
+    override fun applicationInjector() = DaggerAppComponent.builder()
+        .application(this)
+        .build()
 }
