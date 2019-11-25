@@ -3,9 +3,6 @@ package com.dpashko.transitionapp.repository
 import com.dpashko.transitionapp.api.CountriesApi
 import com.dpashko.transitionapp.model.Countries
 import com.dpashko.transitionapp.model.Event
-import kotlinx.coroutines.delay
-import java.lang.Exception
-import java.net.UnknownHostException
 import javax.inject.Inject
 import javax.inject.Singleton
 

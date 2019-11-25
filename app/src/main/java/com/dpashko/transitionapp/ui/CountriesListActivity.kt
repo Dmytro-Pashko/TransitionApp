@@ -1,7 +1,6 @@
 package com.dpashko.transitionapp.ui
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -45,6 +44,7 @@ class CountriesListActivity : AppCompatActivity() {
 
     private fun showData(countries: Countries) {
         view.loading = false
+        view.countries.adapter = CountriesAdapter(countries.list)
     }
 
     private fun showError() {

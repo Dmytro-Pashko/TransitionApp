@@ -12,7 +12,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-
 class CountriesListViewModel @Inject constructor(private val repository: CountryRepository) :
     ViewModel() {
 
