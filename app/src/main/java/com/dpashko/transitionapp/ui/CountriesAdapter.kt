@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
+import com.dpashko.transitionapp.R
 import com.dpashko.transitionapp.databinding.CountryItemBinding
 import com.dpashko.transitionapp.model.Country
 
@@ -28,6 +29,7 @@ class CountryViewHolder(private val view: CountryItemBinding) : RecyclerView.Vie
         view.description.text = country.description
         view.preview.load(country.preview) {
             crossfade(true)
+            placeholder(R.drawable.ic_image_placeholder)
         }
         view.executePendingBindings()
     }
