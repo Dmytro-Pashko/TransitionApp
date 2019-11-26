@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TransitionApp</string>
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores culpa cupiditate delectus deserunt dicta eaque esse facilis fugit illum iure non quibusdam quod repellendus rerum saepe, soluta ullam vero.</string>
 </resources>

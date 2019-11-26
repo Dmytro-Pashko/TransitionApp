@@ -31,6 +31,9 @@ class CountryViewHolder(private val view: CountryItemBinding) : RecyclerView.Vie
             crossfade(true)
             placeholder(R.drawable.ic_image_placeholder)
         }
+        view.root.setOnClickListener {
+            CountryDetailsActivity.start(view.root.context, country)
+        }
         view.executePendingBindings()
     }
 }
