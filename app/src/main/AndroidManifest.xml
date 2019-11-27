@@ -15,11 +15,7 @@
         <activity
             android:name=".ui.CountryDetailsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/DetailsTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.CountriesListActivity" />
-        </activity>
+            android:theme="@style/DetailsTheme" />
         <activity
             android:name=".ui.CountriesListActivity"
             android:theme="@style/Theme.Design">

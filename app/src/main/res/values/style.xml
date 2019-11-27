@@ -7,5 +7,6 @@
 
     <style name="DetailsTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
 </resources>

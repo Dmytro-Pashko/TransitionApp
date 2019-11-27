@@ -23,10 +23,10 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
         const val KEY_COUNTRY = "country_key"
         private const val PERCENTAGE_TO_ANIMATE_PREVIEW = 20
 
-        fun start(context: Context, country: Country) =
+        fun start(context: Context, country: Country, bundle: Bundle?) =
             context.startActivity(
                 Intent(context, CountryDetailsActivity::class.java)
-                    .putExtra(KEY_COUNTRY, country)
+                    .putExtra(KEY_COUNTRY, country), bundle
             )
     }
 
@@ -39,6 +39,11 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
         country =
             savedInstanceState?.getParcelable(KEY_COUNTRY) ?: intent.getParcelableExtra(KEY_COUNTRY)
         country?.let { showCountry(it) }
+    }
+
+    override fun onNavigateUp(): Boolean {
+        supportFinishAfterTransition()
+        return true
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

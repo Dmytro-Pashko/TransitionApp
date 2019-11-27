@@ -44,7 +44,7 @@ class CountriesListActivity : AppCompatActivity() {
 
     private fun showData(countries: Countries) {
         view.loading = false
-        view.countries.adapter = CountriesAdapter(countries.list)
+        view.countries.adapter = CountriesAdapter(this, countries.list)
     }
 
     private fun showError() {
