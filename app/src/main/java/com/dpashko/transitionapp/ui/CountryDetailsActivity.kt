@@ -34,6 +34,7 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
         super.onCreate(savedInstanceState)
         view = DataBindingUtil.setContentView(this, R.layout.activity_country_details)
         setSupportActionBar(view.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         view.appbar.addOnOffsetChangedListener(this)
         country =
             savedInstanceState?.getParcelable(KEY_COUNTRY) ?: intent.getParcelableExtra(KEY_COUNTRY)
@@ -49,7 +50,6 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
 
     private fun showCountry(country: Country) {
         title = country.name
-        view.name.text = country.name
         view.description.text = country.description
         view.preview.load(country.preview) {
             crossfade(true)
@@ -71,15 +71,13 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
                 .scaleX(0f)
                 .setDuration(200)
                 .start()
-        }
-        if (percentage <= PERCENTAGE_TO_ANIMATE_PREVIEW && !isShowPreview) {
+        } else if (percentage <= PERCENTAGE_TO_ANIMATE_PREVIEW && !isShowPreview) {
             isShowPreview = true
             view.preview.animate()
                 .scaleY(1f)
                 .scaleX(1f)
                 .start()
         }
-
     }
 }
 
