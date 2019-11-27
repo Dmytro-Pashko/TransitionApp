@@ -53,10 +53,12 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
         view.description.text = country.description
         view.preview.load(country.preview) {
             crossfade(true)
+            error(R.drawable.ic_image_placeholder)
             placeholder(R.drawable.ic_image_placeholder)
         }
         view.background.load(country.background) {
             crossfade(true)
+            error(R.drawable.ic_image_placeholder)
             placeholder(R.drawable.ic_image_placeholder)
         }
     }
@@ -80,4 +82,3 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
         }
     }
 }
-

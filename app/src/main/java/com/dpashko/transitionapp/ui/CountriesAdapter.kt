@@ -29,6 +29,7 @@ class CountryViewHolder(private val view: CountryItemBinding) : RecyclerView.Vie
         view.description.text = country.description
         view.preview.load(country.preview) {
             crossfade(true)
+            error(R.drawable.ic_image_placeholder)
             placeholder(R.drawable.ic_image_placeholder)
         }
         view.root.setOnClickListener {
