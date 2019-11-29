@@ -81,7 +81,7 @@
             android:elevation="8dp"
             app:layout_anchor="@id/collapsing_background_bottom"
             app:layout_anchorGravity="bottom|center_horizontal"
-            tools:src="@mipmap/ic_launcher" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
 import androidx.databinding.DataBindingUtil
 import coil.api.load
 import com.dpashko.transitionapp.R
@@ -43,7 +44,7 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        supportFinishAfterTransition()
+        super.onBackPressed()
         return true
     }
 
@@ -57,15 +58,12 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
     private fun showCountry(country: Country) {
         title = country.name
         view.description.text = country.description
-        view.preview.transitionName = country.name
-        view.preview.load(country.preview) {
-            error(R.drawable.ic_image_placeholder)
-            placeholder(R.drawable.ic_image_placeholder)
-        }
+        ViewCompat.setTransitionName(view.preview, country.name)
         view.background.load(country.background) {
             error(R.drawable.ic_image_placeholder)
             placeholder(R.drawable.ic_image_placeholder)
         }
+        supportStartPostponedEnterTransition()
     }
 
     override fun onOffsetChanged(appBarLayout: AppBarLayout, i: Int) {
