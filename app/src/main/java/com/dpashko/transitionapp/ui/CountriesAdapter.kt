@@ -4,6 +4,7 @@ import android.app.Activity
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.app.ActivityOptionsCompat
+import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.dpashko.transitionapp.R
@@ -29,14 +30,14 @@ class CountryViewHolder(private val view: CountryItemBinding) : RecyclerView.Vie
     fun bind(activity: Activity, country: Country) {
         view.name.text = country.name
         view.description.text = country.description
+        view.preview.transitionName = country.name
         view.preview.load(country.preview) {
-            crossfade(true)
             error(R.drawable.ic_image_placeholder)
             placeholder(R.drawable.ic_image_placeholder)
         }
         view.root.setOnClickListener {
             val bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                activity, view.preview, "preview"
+                activity, view.preview, country.name
             ).toBundle()
             CountryDetailsActivity.start(activity, country, bundle)
         }

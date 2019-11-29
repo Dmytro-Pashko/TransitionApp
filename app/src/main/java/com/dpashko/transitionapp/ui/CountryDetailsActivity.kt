@@ -32,6 +32,7 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportPostponeEnterTransition()
         view = DataBindingUtil.setContentView(this, R.layout.activity_country_details)
         setSupportActionBar(view.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -41,7 +42,7 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
         country?.let { showCountry(it) }
     }
 
-    override fun onNavigateUp(): Boolean {
+    override fun onSupportNavigateUp(): Boolean {
         supportFinishAfterTransition()
         return true
     }
@@ -56,13 +57,12 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
     private fun showCountry(country: Country) {
         title = country.name
         view.description.text = country.description
+        view.preview.transitionName = country.name
         view.preview.load(country.preview) {
-            crossfade(true)
             error(R.drawable.ic_image_placeholder)
             placeholder(R.drawable.ic_image_placeholder)
         }
         view.background.load(country.background) {
-            crossfade(true)
             error(R.drawable.ic_image_placeholder)
             placeholder(R.drawable.ic_image_placeholder)
         }

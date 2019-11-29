@@ -79,7 +79,6 @@
             android:layout_gravity="center_horizontal"
             android:adjustViewBounds="true"
             android:elevation="8dp"
-            android:transitionName="preview"
             app:layout_anchor="@id/collapsing_background_bottom"
             app:layout_anchorGravity="bottom|center_horizontal"
             tools:src="@mipmap/ic_launcher" />
