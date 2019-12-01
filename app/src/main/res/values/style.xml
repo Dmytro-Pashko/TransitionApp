@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="ListTheme" parent="Theme.AppCompat">
         <item name="android:windowContentTransitions">true</item>
     </style>
 
-    <style name="DetailsTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="windowActionBar">false</item>
+    <style name="DetailsTheme" parent="Theme.AppCompat">
+        <item name="android:windowEnterTransition">@android:transition/fade</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
+
 </resources>
