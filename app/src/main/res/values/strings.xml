@@ -2,4 +2,6 @@
     <string name="app_name">TransitionApp</string>
 
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores culpa cupiditate delectus deserunt dicta eaque esse facilis fugit illum iure non quibusdam quod repellendus rerum saepe, soluta ullam vero.</string>
+    <string name="connection_error_dialog_text">Content not available,\nCheck internet connection and please try again later.</string>
+    <string name="connection_error_retry">Retry</string>
 </resources>

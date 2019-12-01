@@ -8,14 +8,14 @@ import androidx.core.view.ViewCompat
 import androidx.databinding.DataBindingUtil
 import coil.api.load
 import com.dpashko.transitionapp.R
-import com.dpashko.transitionapp.databinding.ActivityCountryDetailsBinding
+import com.dpashko.transitionapp.databinding.CountryDetailsBinding
 import com.dpashko.transitionapp.model.Country
 import com.google.android.material.appbar.AppBarLayout
 import kotlin.math.abs
 
 class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChangedListener {
 
-    private lateinit var view: ActivityCountryDetailsBinding
+    private lateinit var binding: CountryDetailsBinding
     private var country: Country? = null
     private var isShowPreview = false
     private var mMaxScrollSize = 0
@@ -34,10 +34,10 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportPostponeEnterTransition()
-        view = DataBindingUtil.setContentView(this, R.layout.activity_country_details)
-        setSupportActionBar(view.toolbar)
+        binding = DataBindingUtil.setContentView(this, R.layout.country_details)
+        setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        view.appbar.addOnOffsetChangedListener(this)
+        binding.appbar.addOnOffsetChangedListener(this)
         country =
             savedInstanceState?.getParcelable(KEY_COUNTRY) ?: intent.getParcelableExtra(KEY_COUNTRY)
         country?.let { showCountry(it) }
@@ -57,9 +57,9 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
 
     private fun showCountry(country: Country) {
         title = country.name
-        view.description.text = country.description
-        ViewCompat.setTransitionName(view.preview, country.name)
-        view.background.load(country.background) {
+        binding.description.text = country.description
+        ViewCompat.setTransitionName(binding.preview, country.name)
+        binding.background.load(country.background) {
             error(R.drawable.ic_image_placeholder)
             placeholder(R.drawable.ic_image_placeholder)
         }
@@ -71,14 +71,14 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
         val percentage: Int = abs(i) * 100 / mMaxScrollSize
         if (percentage >= PERCENTAGE_TO_ANIMATE_PREVIEW && isShowPreview) {
             isShowPreview = false
-            view.preview.animate()
+            binding.preview.animate()
                 .scaleY(0f)
                 .scaleX(0f)
                 .setDuration(200)
                 .start()
         } else if (percentage <= PERCENTAGE_TO_ANIMATE_PREVIEW && !isShowPreview) {
             isShowPreview = true
-            view.preview.animate()
+            binding.preview.animate()
                 .scaleY(1f)
                 .scaleX(1f)
                 .start()

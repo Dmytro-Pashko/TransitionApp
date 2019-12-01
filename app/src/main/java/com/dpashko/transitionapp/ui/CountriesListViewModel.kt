@@ -8,6 +8,7 @@ import com.dpashko.transitionapp.model.Countries
 import com.dpashko.transitionapp.model.Event
 import com.dpashko.transitionapp.repository.CountryRepository
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
@@ -17,8 +18,8 @@ class CountriesListViewModel @Inject constructor(private val repository: Country
 
     private val countries: MutableLiveData<Event<Countries>> = MutableLiveData()
 
-    fun getCountries(): LiveData<Event<Countries>> {
-        if (countries.value == null) {
+    fun getCountries(forceUpdate: Boolean = false): LiveData<Event<Countries>> {
+        if (forceUpdate || countries.value == null) {
             loadCountries()
         }
         return countries
@@ -28,6 +29,7 @@ class CountriesListViewModel @Inject constructor(private val repository: Country
         countries.postValue(Event.Loading())
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
+                delay(500)
                 val event = repository.getCountries()
                 countries.postValue(event)
             }
