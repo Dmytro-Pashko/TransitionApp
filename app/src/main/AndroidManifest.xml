@@ -17,6 +17,7 @@
             android:theme="@style/DetailsTheme" />
         <activity
             android:name=".ui.CountriesListActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/ListTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

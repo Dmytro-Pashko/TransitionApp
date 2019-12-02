@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
-import androidx.core.view.doOnLayout
 import androidx.databinding.DataBindingUtil
 import coil.api.load
 import com.dpashko.transitionapp.R
@@ -60,6 +59,7 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
         binding.description.text = country.description
         ViewCompat.setTransitionName(binding.preview, country.name)
         binding.background.load(country.background) {
+            crossfade(200)
             error(R.drawable.i_error_placeholder)
             placeholder(R.drawable.i_placeholder)
         }
