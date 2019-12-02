@@ -34,11 +34,11 @@
                     <ImageView
                         android:id="@+id/background"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="300dp"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
                         app:layout_collapseParallaxMultiplier="0.8"
-                        tools:src="@drawable/ic_image_placeholder" />
+                        tools:src="@drawable/i_placeholder" />
 
                     <LinearLayout
                         android:id="@+id/collapsing_background_bottom"

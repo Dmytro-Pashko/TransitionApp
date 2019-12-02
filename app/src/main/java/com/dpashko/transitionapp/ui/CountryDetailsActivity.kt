@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.doOnLayout
 import androidx.databinding.DataBindingUtil
 import coil.api.load
 import com.dpashko.transitionapp.R
@@ -33,7 +34,6 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportPostponeEnterTransition()
         binding = DataBindingUtil.setContentView(this, R.layout.country_details)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -60,10 +60,9 @@ class CountryDetailsActivity : AppCompatActivity(), AppBarLayout.OnOffsetChanged
         binding.description.text = country.description
         ViewCompat.setTransitionName(binding.preview, country.name)
         binding.background.load(country.background) {
-            error(R.drawable.ic_image_placeholder)
-            placeholder(R.drawable.ic_image_placeholder)
+            error(R.drawable.i_error_placeholder)
+            placeholder(R.drawable.i_placeholder)
         }
-        supportStartPostponedEnterTransition()
     }
 
     override fun onOffsetChanged(appBarLayout: AppBarLayout, i: Int) {

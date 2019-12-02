@@ -1,9 +1,12 @@
 package com.dpashko.transitionapp.ui
 
 import android.app.Activity
+import android.app.ActivityOptions
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityOptionsCompat
+import androidx.core.util.Pair
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.dpashko.transitionapp.databinding.CountryItemBinding
@@ -31,10 +34,7 @@ class CountryViewHolder(private val view: CountryItemBinding) : RecyclerView.Vie
         ViewCompat.setTransitionName(view.preview, country.name)
         view.root.setOnClickListener {
             val bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                activity,
-                view.preview,
-                ViewCompat.getTransitionName(view.preview) ?: country.name
-            ).toBundle()
+                activity, Pair(view.preview, country.name)).toBundle()
             CountryDetailsActivity.start(activity, country, bundle)
         }
         view.executePendingBindings()
