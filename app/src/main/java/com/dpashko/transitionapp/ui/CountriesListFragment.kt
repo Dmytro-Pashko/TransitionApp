@@ -11,14 +11,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.dpashko.transitionapp.R
 import com.dpashko.transitionapp.databinding.CountriesListBinding
+import com.dpashko.transitionapp.extension.AndroidInjection
 import com.dpashko.transitionapp.extension.playAnimation
 import com.dpashko.transitionapp.model.Countries
 import com.dpashko.transitionapp.model.Event
 import com.dpashko.transitionapp.model.Status
-import dagger.android.AndroidInjection
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class CountriesListFragment : Fragment() {
+class CountriesListFragment : Fragment(), HasAndroidInjector {
 
     companion object {
         const val TAG = "CountriesListFragment"
@@ -27,6 +29,9 @@ class CountriesListFragment : Fragment() {
             return CountriesListFragment()
         }
     }
+
+    @Inject
+    lateinit var androidInjector: DispatchingAndroidInjector<Any>
 
     @Inject
     lateinit var factory: ViewModelProvider.Factory
@@ -49,10 +54,6 @@ class CountriesListFragment : Fragment() {
         viewModel.getCountries().observe(this, Observer<Event<Countries>> { event ->
             updateList(event)
         })
-        binding.errorRetryBtn.setOnClickListener {
-            showErrorDialog(false)
-            viewModel.getCountries(true)
-        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -97,4 +98,6 @@ class CountriesListFragment : Fragment() {
             })
         }
     }
+
+    override fun androidInjector() = androidInjector
 }

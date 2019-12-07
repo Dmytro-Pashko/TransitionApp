@@ -1,6 +1,7 @@
 package com.dpashko.transitionapp.di
 
 import android.app.Application
+import com.dpashko.transitionapp.ui.CountriesListFragment
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -17,6 +18,8 @@ import javax.inject.Singleton
         ViewModelModule::class]
 )
 interface AppComponent : AndroidInjector<DaggerApplication> {
+
+    public fun inject(fragment: CountriesListFragment)
 
     @Component.Builder
     interface Builder {
