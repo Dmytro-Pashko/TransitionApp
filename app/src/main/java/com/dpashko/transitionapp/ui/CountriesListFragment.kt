@@ -50,7 +50,7 @@ class CountriesListFragment : Fragment(), HasAndroidInjector {
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        val viewModel = ViewModelProviders.of(this, factory)[CountriesListViewModel::class.java]
+        viewModel = ViewModelProviders.of(this, factory)[CountriesListViewModel::class.java]
         viewModel.getCountries().observe(this, Observer<Event<Countries>> { event ->
             updateList(event)
         })
