@@ -1,9 +1,11 @@
 package com.dpashko.transitionapp.ui
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
@@ -16,23 +18,48 @@ import com.dpashko.transitionapp.model.Status
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
-class CountriesListActivity : AppCompatActivity() {
+class CountriesListFragment : Fragment() {
+
+    companion object {
+        const val TAG = "CountriesListFragment"
+
+        fun newInstance(): Fragment {
+            return CountriesListFragment()
+        }
+    }
 
     @Inject
     lateinit var factory: ViewModelProvider.Factory
     private lateinit var binding: CountriesListBinding
+    private lateinit var viewModel: CountriesListViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = DataBindingUtil.inflate(inflater, R.layout.countries_list, container, false)
+        return binding.root
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.countries_list)
-        val model = ViewModelProviders.of(this, factory)[CountriesListViewModel::class.java]
-        model.getCountries().observe(this, Observer<Event<Countries>> { event ->
+        val viewModel = ViewModelProviders.of(this, factory)[CountriesListViewModel::class.java]
+        viewModel.getCountries().observe(this, Observer<Event<Countries>> { event ->
             updateList(event)
         })
         binding.errorRetryBtn.setOnClickListener {
             showErrorDialog(false)
-            model.getCountries(true)
+            viewModel.getCountries(true)
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.errorRetryBtn.setOnClickListener {
+            showErrorDialog(false)
+            viewModel.getCountries(true)
         }
     }
 
@@ -50,7 +77,7 @@ class CountriesListActivity : AppCompatActivity() {
 
     private fun showData(countries: Countries) {
         binding.loading = false
-        binding.countries.adapter = CountriesAdapter(this, countries.list)
+        binding.countries.adapter = CountriesAdapter(countries.list)
     }
 
     private fun showError() {

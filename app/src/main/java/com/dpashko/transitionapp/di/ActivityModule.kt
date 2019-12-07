@@ -1,6 +1,6 @@
 package com.dpashko.transitionapp.di
 
-import com.dpashko.transitionapp.ui.CountriesListActivity
+import com.dpashko.transitionapp.ui.CountriesListFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -8,5 +8,5 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityModule {
 
     @ContributesAndroidInjector
-    abstract fun contributeCountriesListActivity(): CountriesListActivity
+    abstract fun contributeCountriesListFragment(): CountriesListFragment
 }
